@@ -1,8 +1,8 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { WifiOff, RefreshCw, BookOpen, Gamepad2 } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { BookOpen, Gamepad2, RefreshCw, WifiOff } from 'lucide-react';
 import Link from 'next/link';
 
 export default function OfflinePage() {
@@ -24,7 +24,7 @@ export default function OfflinePage() {
             </div>
             <CardTitle className="text-3xl mb-4">You're Offline</CardTitle>
             <p className="text-muted-foreground text-lg">
-              Don't worry! You can still access some features of RuralSTEM Saga while offline.
+              Don't worry! You can still access some features of UDAYA while offline.
             </p>
           </CardHeader>
           

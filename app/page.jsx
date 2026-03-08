@@ -1,24 +1,23 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useTranslation } from 'react-i18next';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import {
-  BookOpen,
-  Users,
-  Globe,
-  PlayCircle,
-  ArrowRight,
-  Gamepad2,
-  Languages,
-  Wifi,
-  BarChart3,
-  Shield,
+    ArrowRight,
+    BarChart3,
+    BookOpen,
+    Gamepad2,
+    Globe,
+    Languages,
+    PlayCircle,
+    Shield,
+    Users,
+    Wifi,
 } from 'lucide-react';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -75,13 +74,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
-                Smart India Hackathon 2025 - Problem Statement 25048
-              </Badge>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
                 {t('homepage.hero.title')}
-                <span className="text-primary block"> - RuralSTEM Saga</span>
+                <span className="text-primary block"> - UDAYA</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -196,7 +192,7 @@ export default function HomePage() {
             Ready to Transform Rural Education?
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Join thousands of students, teachers, and administrators already using RuralSTEM Saga
+            Join thousands of students, teachers, and administrators already using UDAYA
             to make learning engaging and accessible.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,19 +1,19 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAuthStore } from '@/stores/useAuthStore';
-import { useLoading } from '@/contexts/LoadingContext';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ButtonLoader } from '@/components/ui/loader';
-import { toast } from 'react-hot-toast';
-import { Eye, EyeOff, Leaf, Users, Shield } from 'lucide-react';
-import { FaBookOpen as BookOpen } from 'react-icons/fa';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useLoading } from '@/contexts/LoadingContext';
+import { useAuthStore } from '@/stores/useAuthStore';
+import { Eye, EyeOff, Shield, Users } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import { FaBookOpen as BookOpen } from 'react-icons/fa';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -146,7 +146,7 @@ export default function LoginPage() {
 
   const handleDemoLogin = (role) => {
     setFormData({
-      email: `demo.${role}@ruralstemsaga.com`,
+      email: `demo.${role}@udaya.com`,
       password: 'demo123',
       role: role
     });
@@ -155,7 +155,7 @@ export default function LoginPage() {
     setTimeout(() => {
       const userData = {
         id: Math.random().toString(36).substr(2, 9),
-        email: `demo.${role}@ruralstemsaga.com`,
+        email: `demo.${role}@udaya.com`,
         name: `Demo ${role.charAt(0).toUpperCase() + role.slice(1)}`,
         role: role,
         avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=demo${role}`,
@@ -193,7 +193,7 @@ export default function LoginPage() {
               <BookOpen className="h-8 w-8 text-primary" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-foreground mb-2">RuralSTEM Saga</h1>
+          <h1 className="text-3xl font-bold text-foreground mb-2">UDAYA</h1>
           <p className="text-muted-foreground">Empowering Rural Education Through Gaming</p>
         </div>
 
@@ -344,10 +344,6 @@ export default function LoginPage() {
           </CardContent>
         </Card>
 
-        <div className="mt-8 text-center text-xs text-muted-foreground">
-          <p>Smart India Hackathon 2025 | Problem Statement 25048</p>
-          <p className="mt-1">Government of Odisha - Electronics & IT Department</p>
-        </div>
       </div>
     </div>
   );

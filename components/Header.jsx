@@ -1,50 +1,49 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
-import {
-  TextAlignStart as Menu,
-  X,
-  Settings,
-  LogOut,
-  Star,
-  Zap,
-  Target,
-  Shield,
-} from 'lucide-react';
-import { FaBookOpen as BookOpen, FaHome as Home, FaGamepad as Gamepad, FaTrophy as Trophy, FaChartBar as BarChart, FaMedal as Award, FaSearch as Search, FaBell as Bell } from "react-icons/fa";
-import { FaArrowTrendUp as TrendingUp } from "react-icons/fa6";
-import { Button } from '@/components/ui/button';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
 import { Input } from '@/components/ui/input';
-import { LanguageSwitcher } from './LanguageSwitcher';
-import { ThemeToggle } from './ThemeToggle';
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from '@/components/ui/sheet';
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { useAuthStore } from '@/stores/useAuthStore';
 import { useGameStore } from '@/stores/useGameStore';
+import {
+    LogOut,
+    TextAlignStart as Menu,
+    Settings,
+    Shield,
+    Star,
+    Target,
+    X,
+    Zap,
+} from 'lucide-react';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { FaMedal as Award, FaChartBar as BarChart, FaBell as Bell, FaBookOpen as BookOpen, FaGamepad as Gamepad, FaHome as Home, FaSearch as Search, FaTrophy as Trophy } from "react-icons/fa";
+import { FaArrowTrendUp as TrendingUp } from "react-icons/fa6";
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { ThemeToggle } from './ThemeToggle';
 
 const Header = () => {
   const router = useRouter();
@@ -163,8 +162,7 @@ const Header = () => {
               <BookOpen className="h-7 w-7 text-primary" />
             </div>
             <div>
-              <span className="text-primary font-bold text-lg">RuralSTEM</span>
-              <span className="text-muted-foreground font-normal text-lg"> Saga</span>
+              <span className="text-primary font-bold text-lg">UDAYA</span>
             </div>
           </SheetTitle>
           <SheetDescription>
@@ -272,9 +270,8 @@ const Header = () => {
               </div>
               <div className="hidden md:block">
                 <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-green-600 bg-clip-text text-transparent">
-                  RuralSTEM
+                  UDAYA
                 </h1>
-                <p className="text-xs text-muted-foreground -mt-1">Saga</p>
               </div>
             </Link>
           </div>

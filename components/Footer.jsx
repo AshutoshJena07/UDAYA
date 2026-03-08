@@ -1,16 +1,16 @@
 "use client";
 
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import {
-  // BookOpen, 
-  Mail,
-  Phone,
-  MapPin,
-  Globe
+    Globe,
+    // BookOpen, 
+    Mail,
+    MapPin,
+    Phone
 } from 'lucide-react';
-import { FaGithub as Github, FaXTwitter as Twitter, FaHeart as Heart, FaBookOpen as BookOpen } from "react-icons/fa6";
+import Link from 'next/link';
+import { FaBookOpen as BookOpen, FaGithub as Github, FaHeart as Heart, FaXTwitter as Twitter } from "react-icons/fa6";
 
 export function Footer() {
   const footerLinks = {
@@ -65,7 +65,7 @@ export function Footer() {
                   <BookOpen className="h-5 w-5 text-primary-foreground" />
                 </div>
                 <span className="ml-2 text-xl font-bold text-primary">
-                  RuralSTEM Saga
+                  UDAYA
                 </span>
               </div>
               <p className="text-muted-foreground text-sm mb-6 max-w-md">
@@ -163,7 +163,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 text-sm text-muted-foreground">
               <span>
-                © 2025 RuralSTEM Saga. All rights reserved.
+                © 2025 UDAYA. All rights reserved.
               </span>
               <span className="hidden sm:block">|</span>
               <div className="flex items-center">
@@ -189,17 +189,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Government Notice */}
-          <div className="mt-6 pt-6 border-t">
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground mb-2">
-                A project under Smart India Hackathon 2025
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Electronics & IT Department, Government of Odisha
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </footer>

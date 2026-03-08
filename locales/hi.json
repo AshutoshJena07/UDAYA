@@ -52,8 +52,8 @@
     "help": "सहायता"
   },
   "auth": {
-    "loginTitle": "RuralSTEM Saga में लॉग इन करें",
-    "signupTitle": "RuralSTEM Saga में शामिल हों",
+    "loginTitle": "UDAYA में लॉग इन करें",
+    "signupTitle": "UDAYA में शामिल हों",
     "email": "ईमेल पता",
     "password": "पासवर्ड",
     "confirmPassword": "पासवर्ड की पुष्टि करें",
@@ -81,7 +81,7 @@
       "demoVideo": "डेमो देखें"
     },
     "features": {
-      "title": "RuralSTEM Saga क्यों चुनें?",
+      "title": "UDAYA क्यों चुनें?",
       "subtitle": "विशेष रूप से ग्रामीण शिक्षा की चुनौतियों के लिए डिज़ाइन किया गया",
       "interactive": {
         "title": "इंटरैक्टिव गेम्स",

@@ -1,4 +1,4 @@
-# RuralSTEM-Saga
+# UDAYA
 
 <img width="1918" height="972" alt="image" src="https://github.com/user-attachments/assets/d8f409d8-bb44-4724-a00e-1e9ecc0ee302" />
 
@@ -6,21 +6,8 @@
 
 ## Overview
 
-RuralSTEM-Saga is an innovative educational platform designed to bridge the digital divide in rural India by providing engaging, gamified STEM learning experiences. Built specifically for students in rural areas, this platform transforms traditional learning into an interactive adventure that works both online and offline.
+UDAYA is an innovative educational platform designed to bridge the digital divide in rural India by providing engaging, gamified STEM learning experiences. Built specifically for students in rural areas, this platform transforms traditional learning into an interactive adventure that works both online and offline.
 
-### Problem Statement 25048
-
-**Challenge**: Enhancing rural education through digital innovation while addressing connectivity challenges and cultural barriers.
-
-**Solution**: A comprehensive educational platform that combines:
-- 🎮 Interactive educational games
-- 🌐 Multi-language support (English, Hindi, Odia)
-- 📱 Progressive Web App capabilities
-- 🔄 Offline functionality
-- 🏆 Gamification and achievement systems
-- 📊 Progress tracking and analytics
-
----
 
 ## Key Features
 
@@ -139,10 +126,10 @@ RuralSTEM-Saga is an innovative educational platform designed to bridge the digi
 
 ```bash
 # Clone the repository
-git clone https://github.com/imprince26/RuralSTEM-Saga.git
+git clone https://github.com/imprince26/UDAYA.git
 
 # Navigate to project directory
-cd RuralSTEM-Saga
+cd UDAYA
 
 # Install dependencies
 npm install
@@ -161,7 +148,7 @@ npm start
 
 Create `.env.local` file:
 ```bash
-NEXT_PUBLIC_APP_NAME=RuralSTEM-Saga
+NEXT_PUBLIC_APP_NAME=UDAYA
 NEXT_PUBLIC_APP_VERSION=1.0.0
 ```
 
@@ -192,10 +179,15 @@ NEXT_PUBLIC_APP_VERSION=1.0.0
 
 ## Contact & Support
 
-**Team**: RuralSTEM-Saga Development Team  
-**Project**: Smart India Hackathon 2025  
-**Problem Statement**: 25048  
+**Team**: UDAYA Development Team  
 **Focus**: Rural Education Digital Innovation
+
+### Creators
+- Lipsita Khadagrai
+- Ashutosh Jena
+- Kamolika Patra
+- Ashirbada Sahu
+- Jaydeep Gouda
 
 ### Technical Support
 For technical issues or educational content queries, please create an issue in the repository with detailed description and screenshots.
@@ -206,18 +198,3 @@ For technical issues or educational content queries, please create an issue in t
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-## Contact
-- **Meet T-Bot** - [Discover My Work](https://t-bot-blush.vercel.app/)
-- **Tushar Bhardwaj** - [Portfolio](https://tushar-bhardwaj.vercel.app/)
-- **Connect 1:1** - [Topmate](https://topmate.io/tusharbhardwaj)
-- **GitHub:** [TuShArBhArDwA](https://github.com/TuShArBhArDwA)
-- **LinkedIn:** [Tushar Bhardwaj](https://www.linkedin.com/in/bhardwajtushar2004/)
-- **Email:** [tusharbhardwaj2617@example.com](mailto:tusharbhardwaj2617@example.com)
-
----
-
-**Made with ❤️ for Rural India's Digital Education Future**
-
-*Empowering the next generation of rural innovators through accessible, engaging, and culturally relevant STEM education.*

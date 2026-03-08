@@ -1,10 +1,10 @@
-import './globals.css';
-import { Inter, Poppins } from 'next/font/google';
+import AppLayout from '@/components/layout/AppLayout';
 import { AuthProvider } from '@/contexts/AuthContext';
-import { ThemeProvider } from '@/contexts/ThemeContext';
 import { I18nextProvider } from '@/contexts/I18nextProvider';
 import { LoadingProvider } from '@/contexts/LoadingContext';
-import AppLayout from '@/components/layout/AppLayout';
+import { ThemeProvider } from '@/contexts/ThemeContext';
+import { Inter, Poppins } from 'next/font/google';
+import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,8 +18,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'RuralSTEM Saga - Gamified Learning Platform',
-  description: 'A gamified digital platform to enhance STEM learning outcomes for rural students in Odisha',
+  title: 'UDAYA - Gamified Learning Platform',
+  description: 'UDAYA is a gamified digital platform to enhance STEM learning outcomes for rural students in Odisha',
   keywords: 'STEM education, rural learning, gamification, Odisha, educational technology',
 };
 

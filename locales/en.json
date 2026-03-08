@@ -36,8 +36,8 @@
     "help": "Help"
   },
   "auth": {
-    "loginTitle": "Login to RuralSTEM Saga",
-    "signupTitle": "Join RuralSTEM Saga",
+    "loginTitle": "Login to UDAYA",
+    "signupTitle": "Join UDAYA",
     "email": "Email Address",
     "password": "Password",
     "confirmPassword": "Confirm Password",
@@ -65,7 +65,7 @@
       "demoVideo": "Watch Demo"
     },
     "features": {
-      "title": "Why Choose RuralSTEM Saga?",
+      "title": "Why Choose UDAYA?",
       "subtitle": "Designed specifically for rural education challenges",
       "interactive": {
         "title": "Interactive Games",
@@ -109,7 +109,7 @@
     "government": {
       "title": "Government Initiative",
       "subtitle": "Supporting national education goals and rural development",
-      "description": "Part of the Smart India Hackathon initiative to bridge the digital divide in rural education"
+      "description": "A government-supported initiative to bridge the digital divide in rural education"
     }
   },
   "dashboard": {

@@ -1,26 +1,25 @@
 'use client';
 
-import { useState } from 'react';
-import { useLoading } from '@/contexts/LoadingContext';
-import { useAsyncOperation } from '@/hooks/useLoading';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { 
-  PageLoader, 
-  InlineLoader, 
-  ButtonLoader, 
-  GameCardSkeleton, 
-  UserCardSkeleton 
-} from '@/components/ui/loader';
 import { LazySection } from '@/components/ui/lazy-loading';
-import { 
-  RiPlayFill, 
-  RiStopFill, 
-  RiRefreshLine, 
-  RiTestTubeLine,
-  RiGamepadLine,
-  RiTimeLine 
+import {
+    ButtonLoader,
+    GameCardSkeleton,
+    InlineLoader,
+    UserCardSkeleton
+} from '@/components/ui/loader';
+import { useLoading } from '@/contexts/LoadingContext';
+import { useAsyncOperation } from '@/hooks/useLoading';
+import { useState } from 'react';
+import {
+    RiGamepadLine,
+    RiPlayFill,
+    RiRefreshLine,
+    RiStopFill,
+    RiTestTubeLine,
+    RiTimeLine
 } from 'react-icons/ri';
 
 // Mock async function
@@ -121,7 +120,7 @@ export default function LoadingDemoPage() {
       <div className="text-center">
         <h1 className="text-3xl font-bold mb-2">Loading System Demo</h1>
         <p className="text-muted-foreground">
-          Showcase of the comprehensive loading system for RuralSTEM-Saga
+          Showcase of the comprehensive loading system for UDAYA
         </p>
       </div>
 
