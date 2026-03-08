@@ -1,15 +1,20 @@
-import { NextResponse } from 'next/server';
+import connectDB from '@/lib/db/connect';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import connectDB from '@/lib/db/connect';
-import { User } from '@/lib/models';
+import { NextResponse } from 'next/server';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 
 export async function POST(request) {
   try {
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database configuration missing' }, { status: 500 });
+    }
     await connectDB();
-    
+
+    // Ensure models are registered
+    const { User } = await import('@/lib/models');
+
     const { email, password } = await request.json();
 
     // Validation
@@ -52,10 +57,10 @@ export async function POST(request) {
 
     // Generate JWT token
     const token = jwt.sign(
-      { 
+      {
         userId: user._id,
         email: user.email,
-        role: user.role 
+        role: user.role
       },
       JWT_SECRET,
       { expiresIn: '7d' }

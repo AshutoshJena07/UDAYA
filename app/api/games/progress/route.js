@@ -1,20 +1,24 @@
-import { NextResponse } from 'next/server';
 import connectDB from '@/lib/db/connect';
-import { GameProgress, Achievement } from '@/lib/models';
+import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database configuration missing' }, { status: 500 });
+    }
     await connectDB();
-    
-    const { 
-      userId, 
-      gameId, 
-      category, 
-      score, 
-      maxScore, 
-      questionsAttempted, 
-      totalQuestions, 
-      timeSpent, 
+
+    // Ensure models are registered
+    const { GameProgress, Achievement } = await import('@/lib/models');
+
+    const {
+      userId,
+      gameId,
+      category,
+      score,
+      maxScore, questionsAttempted,
+      totalQuestions,
+      timeSpent,
       streak = 0,
       hintsUsed = 0,
       difficulty = 'medium'
@@ -60,7 +64,7 @@ export async function POST(request) {
 
   } catch (error) {
     console.error('Game progress error:', error);
-    
+
     if (error.name === 'ValidationError') {
       const errors = Object.values(error.errors).map(err => err.message);
       return NextResponse.json(
@@ -78,8 +82,14 @@ export async function POST(request) {
 
 export async function GET(request) {
   try {
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database configuration missing' }, { status: 500 });
+    }
     await connectDB();
-    
+
+    // Ensure models are registered
+    const { GameProgress } = await import('@/lib/models');
+
     const { searchParams } = new URL(request.url);
     const userId = searchParams.get('userId');
     const gameId = searchParams.get('gameId');
@@ -94,11 +104,11 @@ export async function GET(request) {
     }
 
     let query = { userId };
-    
+
     if (gameId) {
       query.gameId = gameId;
     }
-    
+
     if (category) {
       query.category = category;
     }

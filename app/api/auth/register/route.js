@@ -1,12 +1,17 @@
-import { NextResponse } from 'next/server';
-import bcrypt from 'bcryptjs';
 import connectDB from '@/lib/db/connect';
-import { User } from '@/lib/models';
+import bcrypt from 'bcryptjs';
+import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database configuration missing' }, { status: 500 });
+    }
     await connectDB();
-    
+
+    // Ensure models are registered
+    const { User } = await import('@/lib/models');
+
     const { name, email, password, role = 'student', grade, language = 'en' } = await request.json();
 
     // Validation
@@ -62,7 +67,7 @@ export async function POST(request) {
 
   } catch (error) {
     console.error('Registration error:', error);
-    
+
     // Handle mongoose validation errors
     if (error.name === 'ValidationError') {
       const errors = Object.values(error.errors).map(err => err.message);

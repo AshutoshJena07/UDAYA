@@ -4,7 +4,13 @@ import { Leaderboard } from '@/lib/models';
 
 export async function GET(request) {
   try {
+    if (!process.env.MONGODB_URI) {
+       return NextResponse.json({ error: 'Database configuration missing' }, { status: 500 });
+    }
     await connectDB();
+    
+    // Ensure models are registered
+    const { Leaderboard } = await import('@/lib/models');
     
     const { searchParams } = new URL(request.url);
     const category = searchParams.get('category') || 'overall';
@@ -44,7 +50,13 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
+    if (!process.env.MONGODB_URI) {
+       return NextResponse.json({ error: 'Database configuration missing' }, { status: 500 });
+    }
     await connectDB();
+    
+    // Ensure models are registered
+    const { Leaderboard } = await import('@/lib/models');
     
     const { category = 'overall', period = 'all-time' } = await request.json();
 

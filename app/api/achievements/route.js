@@ -1,11 +1,16 @@
-import { NextResponse } from 'next/server';
 import connectDB from '@/lib/db/connect';
-import { Achievement } from '@/lib/models';
+import { NextResponse } from 'next/server';
 
 export async function GET(request) {
   try {
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json({ error: 'Database configuration missing' }, { status: 500 });
+    }
     await connectDB();
-    
+
+    // Ensure models are registered
+    const { Achievement } = await import('@/lib/models');
+
     const { searchParams } = new URL(request.url);
     const userId = searchParams.get('userId');
     const category = searchParams.get('category');
@@ -20,11 +25,11 @@ export async function GET(request) {
     }
 
     let query = { userId, isVisible: true };
-    
+
     if (category) {
       query.category = category;
     }
-    
+
     if (type) {
       query.type = type;
     }
